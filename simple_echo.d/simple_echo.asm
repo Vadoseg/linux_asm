@@ -20,7 +20,6 @@ read_f:
     syscall         ; rax returns number of readed bytes
 
 write_f:
-    mov rdx, rax ; Save in rdx number of bytes returned by rax
     mov rax, 1   ; syscall for sys_write
     mov rdi, 1   ; fd for stdout
     mov rsi, buf ; buf addr
